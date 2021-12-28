@@ -1,0 +1,33 @@
+.movie-thumbnail{
+    position: relative;
+}
+
+.movie-thumbnail_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.movie-thumbnail_overlay:hover{
+    opacity: 1;
+}
+
+.movie-thumbnail_button
+{
+    padding: 4px 10px;
+    margin: 5px;
+    background-color: #1976d2;
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 10px;    
+    color: white;
+}
