@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Box from '@mui/material/Box';
 import '../styles/movie.css';
 
 const Movies = ({ movie }) => {
