@@ -23,13 +23,13 @@ const MovieDetails = () => {
     useEffect(() => {
         if(id)
         {
-            axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=a348815fad96877ddb9be8d0fea4e23b&language=en-US`)
+            axios.get(`${process.env.REACT_APP_API_URL}movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
             .then((res) => {
                 console.log(res);     
                 setMovieDetail(res.data);                   
             }) 
     
-            axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=a348815fad96877ddb9be8d0fea4e23b&language=en-US`)
+            axios.get(`${process.env.REACT_APP_API_URL}movie/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`)
             .then((res) => {
                 console.log(res.data.cast);            
                 console.log(res.data.crew);

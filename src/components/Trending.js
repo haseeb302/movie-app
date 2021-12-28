@@ -10,9 +10,9 @@ import Movies from "./Movies";
 const Trending = () => {
 
     const [trendingMovies, setTrendingMovies] = useState('');
-    
+        
     useEffect(() => {
-        axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=a348815fad96877ddb9be8d0fea4e23b`)
+        axios.get(`${process.env.REACT_APP_API_URL}trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`)
         .then((res) => {
             console.log(res);
             setTrendingMovies(res.data.results);

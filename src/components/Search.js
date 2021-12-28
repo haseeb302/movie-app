@@ -20,7 +20,7 @@ const Search = () => {
     useEffect(() => {
         if(query !== '' && query.length > 2)
         {
-            axios.get(`https://api.themoviedb.org/3/search/movie?api_key=a348815fad96877ddb9be8d0fea4e23b&page=1&query=${query}`)
+            axios.get(`${process.env.REACT_APP_API_URL}search/movie?api_key=${process.env.REACT_APP_API_KEY}&page=1&query=${query}`)
             .then((res) => {
                 console.log(res);
                 setMovieData(res.data.results);

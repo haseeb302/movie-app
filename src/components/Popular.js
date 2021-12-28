@@ -13,7 +13,7 @@ const Popular = () => {
 
 
     useEffect(() => {
-        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=a348815fad96877ddb9be8d0fea4e23b&language=en-US&page=1`)
+        axios.get(`${process.env.REACT_APP_API_URL}movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
         .then((res) => {
             console.log(res);
             setPopularMovies(res.data.results);
