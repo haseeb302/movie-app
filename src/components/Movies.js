@@ -5,11 +5,8 @@ import '../styles/movie.css';
 
 const Movies = ({ movie }) => {
     
-    const [hovered, setHovered] = useState(false);
-
     return (
-        <Box sx={{ maxWidth: 500, margin: "5px", position: "relative"}} className="movie-thumbnail"
-            onMouseOver={() => setHovered(true)} onMouseOut={() => setHovered(false)}
+        <Box sx={{ maxWidth: 500, margin: "5px", position: "relative"}} className="movie-thumbnail"            
         >
             <img src={`http://image.tmdb.org/t/p/w154/${movie.poster_path}`}                
             />    
