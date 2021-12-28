@@ -6,7 +6,8 @@ import '../styles/movie.css';
 const Movies = ({ movie }) => {
     
     return (
-        <Box sx={{ maxWidth: 500, margin: "5px", position: "relative"}} className="movie-thumbnail"            
+        <>
+        {movie.poster_path && <Box sx={{ maxWidth: 500, margin: "5px", position: "relative"}} className="movie-thumbnail"            
         >
             <img src={`http://image.tmdb.org/t/p/w154/${movie.poster_path}`}                
             />    
@@ -18,7 +19,8 @@ const Movies = ({ movie }) => {
                 </Link>                
             </div>
                 
-        </Box>
+        </Box>}
+        </>
     )
 }
 
